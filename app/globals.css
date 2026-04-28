@@ -1,0 +1,57 @@
+@import "tailwindcss";
+
+:root {
+  --background: #0a0a0a;
+  --foreground: #ededed;
+  --color-romantic-pink: #FFB7C5;
+  --color-romantic-yellow: #FFE082;
+  --color-romantic-peach: #FFDAB9;
+  --color-romantic-accent: #E91E63;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-romantic-pink: var(--color-romantic-pink);
+  --color-romantic-yellow: var(--color-romantic-yellow);
+  --color-romantic-peach: var(--color-romantic-peach);
+  --color-romantic-accent: var(--color-romantic-accent);
+  
+  --color-sunset-gradient: linear-gradient(to right, #FFB7C5, #FFE082, #FFDAB9);
+  --color-dreamy-glow: radial-gradient(circle, rgba(255,255,255,0.3) 0%, rgba(0,0,0,0) 70%);
+  
+  --shadow-soft-glow: 0 0 15px 2px rgba(233, 30, 99, 0.3);
+  --shadow-yellow-glow: 0 0 15px 2px rgba(255, 224, 130, 0.4);
+  
+  --drop-shadow-yellow-glow: 0 0 20px rgba(255, 224, 130, 0.5);
+  
+  --animate-float: float 6s ease-in-out infinite;
+  --animate-subtle-pulse: subtle-pulse 3s infinite;
+  --animate-shake: shake 0.5s cubic-bezier(.36,.07,.19,.97) both;
+  
+  --font-sans: Arial, Helvetica, sans-serif;
+  --font-mono: monospace;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
+}
+
+@keyframes subtle-pulse {
+  0%, 100% { opacity: 0.9; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.02); }
+}
+
+@keyframes shake {
+  10%, 90% { transform: translate3d(-1px, 0, 0); }
+  20%, 80% { transform: translate3d(2px, 0, 0); }
+  30%, 50%, 70% { transform: translate3d(-4px, 0, 0); }
+  40%, 60% { transform: translate3d(4px, 0, 0); }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+}
