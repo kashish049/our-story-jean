@@ -60,8 +60,10 @@ export default function OurStoryPage() {
   };
 
   // Only use scroll hook when authorized
-  const mainRef = useRef<HTMLDivElement>(null);
-  const { scrollYProgress } = useScroll({ target: authorized ? mainRef : null });
+  const mainRef = useRef<any>(null);
+  const { scrollYProgress } = useScroll({ 
+  target: authorized ? mainRef : undefined 
+});
   const scaleProgress = useTransform(scrollYProgress, [0, 0.3], [1, 0.9]);
 
   // --- PASSWORD GATE SCREEN ---
