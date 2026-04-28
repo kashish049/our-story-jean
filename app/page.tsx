@@ -46,7 +46,7 @@ export default function OurStoryPage() {
   const [musicPlaying, setMusicPlaying] = useState(false);
 
   // 🛠️ MOBILE FIX: Added event preventDefault to handle form submission
-  const handleLogin = (e?: React.FormEvent) => {
+   const handleLogin = (e?: React.FormEvent) => {
     if (e) e.preventDefault();
     
     if (password === CORRECT_PASSWORD) {
